@@ -1,6 +1,7 @@
 package laserX;
 
 public class EmpleadoRegular implements Empleado {
+    public static final String VALIDA_DIRECTOR = "Como director solo mandos medios pueden estar a mi cargo";
     private final String nombre;
     private float salario;
     private Cargo cargo;
@@ -13,6 +14,23 @@ public class EmpleadoRegular implements Empleado {
 
     public float salario() {
         return this.salario;
+    }
+
+    @Override
+    public void puedeEmplear(Empleado empleado) {
+        throw new RuntimeException(VALIDA_REGULAR);
+    }
+
+    @Override
+    public void aceptarComoJefe(EmpleadoJerarquico jefe) {
+        if(jefe.cargo().equals(Cargo.DIRECTOR)){
+            throw new RuntimeException(VALIDA_DIRECTOR);
+        };
+    }
+
+    @Override
+    public void aceptarComoJefe(EmpleadoRegular jefe) {
+        throw new RuntimeException(VALIDA_REGULAR);
     }
 
     @Override
