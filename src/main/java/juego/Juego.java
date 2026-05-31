@@ -15,18 +15,33 @@ public class Juego {
             String eleccionUsuario = elegirElementoUsuario(scanner);
             String eleccionComputadora = elegirElementoComputadora(opciones);
 
+            Jugada jugadaUsuario = obtenerJugada(eleccionUsuario);
+            Jugada jugadaComputadora = obtenerJugada(eleccionComputadora);
+
             // Mostrar las elecciones de ambos jugadores
             System.out.println("Tu elección: " + eleccionUsuario);
             System.out.println("Elección de la computadora: " + eleccionComputadora);
 
             // Mostrar el resultado
-            System.out.println(new Jugada().jugar(eleccionUsuario, eleccionComputadora));
+            jugadaUsuario.comparar(jugadaComputadora);
 
             continuar = preguntarSiQueremosContinuar();
         }// end while
 
         System.out.println("¡Hasta pronto!");
         scanner.close();
+    }
+
+    private Jugada obtenerJugada(String eleccionUsuario) {
+        if(eleccionUsuario.equals("piedra")) {
+            return new Piedra();
+        } else if(eleccionUsuario.equals("papel")) {
+            return new Papel();
+        } else if(eleccionUsuario.equals("tijera")) {
+            return new Tijera();
+        } else {
+            throw new IllegalArgumentException("Opción no válida: " + eleccionUsuario);
+        }
     }
 
     private String elegirElementoUsuario(Scanner scanner) {
