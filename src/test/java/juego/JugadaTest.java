@@ -2,62 +2,145 @@ package juego;
 
 import org.junit.jupiter.api.Test;
 
-import static juego.Jugada.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class JugadaTest {
+class JugadaTest {
 
     @Test
-    void testPiedraLeGanaATijera() {
-        String resultado = new Jugada().jugar(PIEDRA, TIJERA);
-        assertEquals(Jugada.GANASTE, resultado);
+    void piedraLeGanaATijera() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Piedra().comparar(new Tijera());
+
+        assertEquals(
+                "¡Ganaste!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testPiedraPierdeConPapel() {
-        String resultado = new Jugada().jugar(PIEDRA, PAPEL);
-        assertEquals(Jugada.PERDISTE, resultado);
+    void piedraPierdeConPapel() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Piedra().comparar(new Papel());
+
+        assertEquals(
+                "¡Perdiste!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testPiedraEmpataConPiedra() {
-        String resultado = new Jugada().jugar(PIEDRA, PIEDRA);
-        assertEquals(Jugada.EMPATE, resultado);
+    void piedraEmpataConPiedra() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Piedra().comparar(new Piedra());
+
+        assertEquals(
+                "¡Es un empate!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testPapelEmpataConPapel() {
-        String resultado = new Jugada().jugar(PAPEL, PAPEL);
-        assertEquals(Jugada.EMPATE, resultado);
+    void papelLeGanaAPiedra() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Papel().comparar(new Piedra());
+
+        assertEquals(
+                "¡Ganaste!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testPapelPierdeConTijera() {
-        String resultado = new Jugada().jugar(PAPEL, TIJERA);
-        assertEquals(Jugada.PERDISTE, resultado);
+    void papelPierdeConTijera() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Papel().comparar(new Tijera());
+
+        assertEquals(
+                "¡Perdiste!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testPapelLeGanaAPiedra() {
-        String resultado = new Jugada().jugar(PAPEL, PIEDRA);
-        assertEquals(Jugada.GANASTE, resultado);
+    void papelEmpataConPapel() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Papel().comparar(new Papel());
+
+        assertEquals(
+                "¡Es un empate!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testTijeraEmpataConTijera() {
-        String resultado = new Jugada().jugar(TIJERA, TIJERA);
-        assertEquals(Jugada.EMPATE, resultado);
+    void tijeraLeGanaAPapel() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Tijera().comparar(new Papel());
+
+        assertEquals(
+                "¡Ganaste!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testTijeraPierdeConPiedra() {
-        String resultado = new Jugada().jugar(TIJERA, PIEDRA);
-        assertEquals(Jugada.PERDISTE, resultado);
+    void tijeraPierdeConPiedra() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Tijera().comparar(new Piedra());
+
+        assertEquals(
+                "¡Perdiste!" + System.lineSeparator(),
+                salida.toString());
     }
 
     @Test
-    void testTijeraLeGanaAPapel() {
-        String resultado = new Jugada().jugar(TIJERA, PAPEL);
-        assertEquals(Jugada.GANASTE, resultado);
+    void tijeraEmpataConTijera() {
+
+        ByteArrayOutputStream salida =
+                new ByteArrayOutputStream();
+
+        System.setOut(new PrintStream(salida));
+
+        new Tijera().comparar(new Tijera());
+
+        assertEquals(
+                "¡Es un empate!" + System.lineSeparator(),
+                salida.toString());
     }
 }
