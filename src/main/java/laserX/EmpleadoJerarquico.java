@@ -20,18 +20,6 @@ public abstract class EmpleadoJerarquico implements Empleado {
     }
 
     @Override
-    public abstract void puedeEmplear(Empleado empleado);
-
-    @Override
-    public abstract void aceptarComoJefe(Director jefe);
-
-    @Override
-    public abstract void aceptarComoJefe(MandoMedio jefe);
-
-    @Override
-    public abstract void aceptarComoJefe(EmpleadoRegular jefe);
-
-    @Override
     public float calcularSalario() {
         float total = this.salario;
         for (Empleado m : empleados) {

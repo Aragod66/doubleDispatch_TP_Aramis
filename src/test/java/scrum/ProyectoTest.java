@@ -2,64 +2,147 @@ package scrum;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class ProyectoTest {
+class ProyectoTest {
 
     @Test
-    public void hitoriaNoPuedeContenerAHistoria() {
-        var tareaCompleja = new TareaCompleja(10, TipoTarea.HISTORIA_USUARIO);
-        var tareaCompleja2 = new TareaCompleja(20, TipoTarea.HISTORIA_USUARIO);
-        var e = assertThrows(RuntimeException.class, () -> {
-            tareaCompleja.agregarItem(tareaCompleja2);
-        });
+    void historiaNoPuedeContenerHistoria() {
 
-        assertEquals(TareaCompleja.VALIDA_HISTORIA, e.getMessage());
+        var historia1 = new HistoriaDeUsuario(10);
+        var historia2 = new HistoriaDeUsuario(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> historia1.agregarItem(historia2));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_HISTORIA,
+                e.getMessage());
     }
 
     @Test
-    public void hitoriaNoPuedeContenerASpike() {
-        var tareaCompleja = new TareaCompleja(10, TipoTarea.HISTORIA_USUARIO);
-        var spike = new Tarea(20, TipoTarea.SPIKE);
-        var e = assertThrows(RuntimeException.class, () -> {
-            tareaCompleja.agregarItem(spike);
-        });
-        assertEquals(TareaCompleja.VALIDA_HISTORIA, e.getMessage());
+    void historiaNoPuedeContenerSpike() {
+
+        var historia = new HistoriaDeUsuario(10);
+        var spike = new Spike(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> historia.agregarItem(spike));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_HISTORIA,
+                e.getMessage());
     }
 
     @Test
-    public void epicaNoPuedeContenerTareaDesarrollo() {
-        var tareaCompleja = new TareaCompleja(10, TipoTarea.EPICA);
-        var td = new Tarea(20, TipoTarea.TAREA_DESARROLLO);
-        var e = assertThrows(RuntimeException.class, () -> {
-            tareaCompleja.agregarItem(td);
-        });
-        assertEquals(TareaCompleja.VALIDA_EPICA, e.getMessage());
+    void historiaNoPuedeContenerEpica() {
+
+        var historia = new HistoriaDeUsuario(10);
+        var epica = new TareaEpica(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> historia.agregarItem(epica));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_HISTORIA,
+                e.getMessage());
     }
 
     @Test
-    public void noPuedoCrearUnaEpicaComoTareaSimple() {
-        var e = assertThrows(RuntimeException.class, () -> {
-            new Tarea(20, TipoTarea.EPICA);
-        });
-        assertEquals(Tarea.VALIDA_TAREA_SIMPLE, e.getMessage());
+    void historiaPuedeContenerTareaDesarrollo() {
+
+        var historia = new HistoriaDeUsuario(10);
+        var desarrollo = new TareaDesarrollo(20);
+
+        assertDoesNotThrow(
+                () -> historia.agregarItem(desarrollo));
     }
 
     @Test
-    public void noPuedoCrearUnaHSComoTareaSimple() {
-        var e = assertThrows(RuntimeException.class, () -> {
-            new Tarea(20, TipoTarea.HISTORIA_USUARIO);
-        });
-        assertEquals(Tarea.VALIDA_TAREA_SIMPLE, e.getMessage());
+    void epicaPuedeContenerSpike() {
+
+        var epica = new TareaEpica(10);
+        var spike = new Spike(20);
+
+        assertDoesNotThrow(
+                () -> epica.agregarItem(spike));
     }
 
     @Test
-    public void noPuedoCrearUnSpikeComoTareaCompleja() {
-        var e = assertThrows(RuntimeException.class, () -> {
-            new TareaCompleja(20, TipoTarea.SPIKE);
-        });
-        assertEquals(TareaCompleja.VALIDA_TAREA_COMPLEJA, e.getMessage());
+    void epicaNoPuedeContenerHistoria() {
+
+        var epica = new TareaEpica(10);
+        var historia = new HistoriaDeUsuario(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> epica.agregarItem(historia));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_EPICA,
+                e.getMessage());
     }
-    //hacen falta mas tests...
+
+    @Test
+    void epicaNoPuedeContenerTareaDesarrollo() {
+
+        var epica = new TareaEpica(10);
+        var desarrollo = new TareaDesarrollo(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> epica.agregarItem(desarrollo));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_EPICA,
+                e.getMessage());
+    }
+
+    @Test
+    void epicaNoPuedeContenerOtraEpica() {
+
+        var epica1 = new TareaEpica(10);
+        var epica2 = new TareaEpica(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> epica1.agregarItem(epica2));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_EPICA,
+                e.getMessage());
+    }
+
+    @Test
+    void tareaDesarrolloNoPuedeContenerItems() {
+
+        var desarrollo = new TareaDesarrollo(10);
+        var spike = new Spike(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> desarrollo.puedeAgregar(spike));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_AGREGAR_SIMPLE,
+                e.getMessage());
+    }
+
+    @Test
+    void spikeNoPuedeContenerItems() {
+
+        var spike = new Spike(10);
+        var desarrollo = new TareaDesarrollo(20);
+
+        RuntimeException e = assertThrows(
+                RuntimeException.class,
+                () -> spike.puedeAgregar(desarrollo));
+
+        assertEquals(
+                ItemDeProyecto.VALIDA_AGREGAR_SIMPLE,
+                e.getMessage());
+    }
 }
