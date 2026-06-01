@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d582e806-a210-4a49-935b-752eed3ec0e0" name="Changes" comment="TestJugadaFix">
+    <list default="true" id="d582e806-a210-4a49-935b-752eed3ec0e0" name="Changes" comment="Empleado DoubleDispatch">
+      <change afterPath="$PROJECT_DIR$/src/main/java/laserX/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/laserX/MandoMedio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laserX/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoJerarquico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoJerarquico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoRegular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/laserx/EmpleadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/laserx/EmpleadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scrum/ItemDeProyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scrum/ItemDeProyecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scrum/Tarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scrum/Tarea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scrum/TareaCompleja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scrum/TareaCompleja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/laserX/EmpleadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/laserX/EmpleadoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.EmpleadoTest (1).executor": "Run",
     "JUnit.EmpleadoTest.executor": "Run",
     "JUnit.JugadaTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -180,13 +187,22 @@
       <option name="project" value="LOCAL" />
       <updated>1780232417800</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Empleado DoubleDispatch">
+      <option name="closed" value="true" />
+      <created>1780235178780</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780235178780</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tp DoubleDispatch" />
     <MESSAGE value="TestJugadaFix" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestJugadaFix" />
+    <MESSAGE value="Empleado DoubleDispatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Empleado DoubleDispatch" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
