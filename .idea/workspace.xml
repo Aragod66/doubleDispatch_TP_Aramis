@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d582e806-a210-4a49-935b-752eed3ec0e0" name="Changes" comment="Proyecto DoubleDispatch">
-      <change afterPath="$PROJECT_DIR$/src/main/java/compras/ClienteCorporativo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/compras/ClienteRegular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compras/CarritoCompras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/CarritoCompras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compras/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compras/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compras/ProductoFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/ProductoFisico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compras/ServicioDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/ServicioDigital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/Director.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoRegular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/MandoMedio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/MandoMedio.java" afterDir="false" />
+    <list default="true" id="d582e806-a210-4a49-935b-752eed3ec0e0" name="Changes" comment="ejercicio 4 y eliminar codigo muerto">
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Articulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Condicion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Deteriorado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Disco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Nuevo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Prestamo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Revista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/Usado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/biblioteca/BibliotecaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +63,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.BibliotecaTest.executor": "Run",
+    "JUnit.CarritoComprasTest.executor": "Run",
     "JUnit.EmpleadoTest (1).executor": "Run",
     "JUnit.EmpleadoTest.executor": "Run",
     "JUnit.JugadaTest.executor": "Run",
@@ -80,7 +82,22 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.EmpleadoTest (1)">
+  <component name="RunManager" selected="JUnit.BibliotecaTest">
+    <configuration name="BibliotecaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop2-ejercicios-double-dispatch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="biblioteca.BibliotecaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CarritoComprasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop2-ejercicios-double-dispatch" />
       <extension name="coverage">
@@ -106,21 +123,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="laserX" />
       <option name="MAIN_CLASS_NAME" value="laserX.EmpleadoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmpleadoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop2-ejercicios-double-dispatch" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="laserX.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="laserx" />
-      <option name="MAIN_CLASS_NAME" value="laserx.EmpleadoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BibliotecaTest" />
         <item itemvalue="JUnit.EmpleadoTest (1)" />
         <item itemvalue="JUnit.CarritoComprasTest" />
         <item itemvalue="JUnit.ProyectoTest" />
         <item itemvalue="JUnit.ProyectoTest.historiaNoPuedeContenerSpike" />
-        <item itemvalue="JUnit.EmpleadoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780331055525</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ejercicio 4 y eliminar codigo muerto">
+      <option name="closed" value="true" />
+      <created>1780400377959</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1780400377959</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +263,8 @@
     <MESSAGE value="Empleado DoubleDispatch" />
     <MESSAGE value="Empleado FIX DoubleDispatch" />
     <MESSAGE value="Proyecto DoubleDispatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proyecto DoubleDispatch" />
+    <MESSAGE value="ejercicio 4 y eliminar codigo muerto" />
+    <option name="LAST_COMMIT_MESSAGE" value="ejercicio 4 y eliminar codigo muerto" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
