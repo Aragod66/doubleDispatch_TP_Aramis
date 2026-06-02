@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d582e806-a210-4a49-935b-752eed3ec0e0" name="Changes" comment="Empleado FIX DoubleDispatch">
-      <change afterPath="$PROJECT_DIR$/src/main/java/scrum/HistoriaDeUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/scrum/Spike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/scrum/TareaDesarrollo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/scrum/TareaEpica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/Cargo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoJerarquico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoJerarquico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scrum/ItemDeProyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scrum/ItemDeProyecto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scrum/Tarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scrum/Tarea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scrum/TareaCompleja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scrum/TareaCompleja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scrum/TipoTarea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/scrum/ProyectoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/scrum/ProyectoTest.java" afterDir="false" />
+    <list default="true" id="d582e806-a210-4a49-935b-752eed3ec0e0" name="Changes" comment="Proyecto DoubleDispatch">
+      <change afterPath="$PROJECT_DIR$/src/main/java/compras/ClienteCorporativo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compras/ClienteRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compras/CarritoCompras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/CarritoCompras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compras/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compras/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compras/ProductoFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/ProductoFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compras/ServicioDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compras/ServicioDigital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/Director.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/EmpleadoRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/laserX/MandoMedio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/laserX/MandoMedio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +67,7 @@
     "JUnit.EmpleadoTest.executor": "Run",
     "JUnit.JugadaTest.executor": "Run",
     "JUnit.ProyectoTest.executor": "Run",
+    "JUnit.ProyectoTest.historiaNoPuedeContenerSpike.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -80,7 +80,22 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ProyectoTest">
+  <component name="RunManager" selected="JUnit.EmpleadoTest (1)">
+    <configuration name="CarritoComprasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop2-ejercicios-double-dispatch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compras.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="compras" />
+      <option name="MAIN_CLASS_NAME" value="compras.CarritoComprasTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmpleadoTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop2-ejercicios-double-dispatch" />
       <extension name="coverage">
@@ -106,21 +121,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="laserx" />
       <option name="MAIN_CLASS_NAME" value="laserx.EmpleadoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JugadaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oop2-ejercicios-double-dispatch" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="juego.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="juego" />
-      <option name="MAIN_CLASS_NAME" value="juego.JugadaTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmpleadoTest (1)" />
+        <item itemvalue="JUnit.CarritoComprasTest" />
         <item itemvalue="JUnit.ProyectoTest" />
         <item itemvalue="JUnit.ProyectoTest.historiaNoPuedeContenerSpike" />
-        <item itemvalue="JUnit.EmpleadoTest (1)" />
         <item itemvalue="JUnit.EmpleadoTest" />
-        <item itemvalue="JUnit.JugadaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780329005331</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Proyecto DoubleDispatch">
+      <option name="closed" value="true" />
+      <created>1780331055525</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1780331055525</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +252,8 @@
     <MESSAGE value="TestJugadaFix" />
     <MESSAGE value="Empleado DoubleDispatch" />
     <MESSAGE value="Empleado FIX DoubleDispatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Empleado FIX DoubleDispatch" />
+    <MESSAGE value="Proyecto DoubleDispatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proyecto DoubleDispatch" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

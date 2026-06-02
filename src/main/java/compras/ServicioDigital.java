@@ -17,15 +17,15 @@ public class ServicioDigital implements Producto {
     }
 
     @Override
-    public float costoEnvio(TipoCliente tipo) {
+    public float costoEnvio(Cliente cliente) {
         return 0;
     }
 
     @Override
-    public float impuesto(TipoCliente tipo) {
-        if (tipo.equals(TipoCliente.REGULAR)) {
-            return this.precio * 0.10f;
-        }
-        return 0;
+    public float impuesto(Cliente cliente) {
+//        if (tipo.equals(TipoCliente.REGULAR)) {
+//            return this.precio * 0.10f;
+//        }
+        return this.precio * cliente.factorImpuestoDigital(this);
     }
 }

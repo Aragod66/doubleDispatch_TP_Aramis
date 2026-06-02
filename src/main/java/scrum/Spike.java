@@ -16,18 +16,10 @@ public class Spike extends Tarea{
         //correcto
     }
 
-    @Override
-    public void aceptarAddTarea(TareaDesarrollo tarea) {
-        throw new RuntimeException(VALIDA_AGREGAR_SIMPLE);
-    }
 
     @Override
     public void aceptarAddTarea(HistoriaDeUsuario tarea) {
         throw new RuntimeException(VALIDA_HISTORIA);
     }
 
-    @Override
-    public void aceptarAddTarea(Spike tarea) {
-        throw new RuntimeException(VALIDA_AGREGAR_SIMPLE);
-    }
 }

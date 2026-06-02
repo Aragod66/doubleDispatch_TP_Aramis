@@ -20,8 +20,5 @@ public class Director extends EmpleadoJerarquico{
         throw new RuntimeException(VALIDA_MANDOMEDIO);
     }
 
-    @Override
-    public void aceptarComoJefe(EmpleadoRegular jefe) {
-        throw new RuntimeException(VALIDA_REGULAR);
-    }
+
 }

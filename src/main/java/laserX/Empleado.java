@@ -7,7 +7,6 @@ public interface Empleado {
     public void puedeEmplear(Empleado empleado);
     public void aceptarComoJefe(Director jefe);
     public void aceptarComoJefe(MandoMedio jefe);
-    public void aceptarComoJefe(EmpleadoRegular jefe);
     float calcularSalario();
 
 }

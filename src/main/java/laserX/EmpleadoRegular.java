@@ -28,10 +28,6 @@ public class EmpleadoRegular implements Empleado {
         //correcto
     }
 
-    @Override
-    public void aceptarComoJefe(EmpleadoRegular jefe) {
-        throw new RuntimeException(VALIDA_REGULAR);
-    }
 
     @Override
     public float calcularSalario() {

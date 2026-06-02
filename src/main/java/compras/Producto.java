@@ -4,7 +4,7 @@ public interface Producto {
 
     float precio();
 
-    float costoEnvio(TipoCliente tipo);
+    float costoEnvio(Cliente cliente);
 
-    float impuesto(TipoCliente tipo);
+    float impuesto(Cliente cliente);
 }
